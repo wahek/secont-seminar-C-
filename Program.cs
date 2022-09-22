@@ -67,50 +67,41 @@
 
 // 32679 -> 6
 
-// Console.Write("Введите число");
-// int num = int.Parse(Console.ReadLine());
-// if (num > 99){
-//     Console.Write("Третей цыфры нет");
-// }
-// else{
-
-// }
-// int a = 1234;
-// string str = a.ToString();
-// int[] b = new int[str.Length];
-// for( int i=0; i< str.Length; i++)
-// {
-//      b[i] = int.Parse(str[i].ToString());
-
-// }
+Console.Write("Введите число ");
+int num = int.Parse(Console.ReadLine());
+if (num < 100) Console.Write("Третьего числа нет");
+else{
+    if (num < 1000){
+    int three = num % 10;
+    Console.Write(three);
+    }
+    else {
+        while (num > 1000){
+            num = num / 10;
+        }
+    int last = num % 10;
+    Console.Write(last);
+    }
+}
 
 // Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 
-// 6 -> да
-// 7 -> да
-// 1 -> нет
+
 // Console.Write("Введите цифру дня недели ");
 // int num = int.Parse(Console.ReadLine());
-// if ((num > 7)&&(num < 1))
+// if ((num > 0)&&(num < 8))
 // {
-//     Console.Write($"wda{num}");
+// if (num < 6) Console.Write("Рабочий");
+// else Console.Write("Выходной");
 // }
-// else {
-//     if (num == 1) Console.Write("Понедельник Рабочий");
-//     if (num == 2) Console.Write("Вторник Рабочий");
-//     if (num == 3) Console.Write("Среда Рабочий");
-//     if (num == 4) Console.Write("Четверг Рабочий");
-//     if (num == 5) Console.Write("Пятница Рабочий");
-//     if (num == 6) Console.Write("Суббота выходной");
-//     if (num == 7) Console.Write("Воскресенье выходной");
+// else Console.Write("Некоректные данные");
 
-// }
+// Напишите программу, которая принимает на вход координаты точки (X и Y), 
+// причём X ≠ 0 и Y ≠ 0 и выдаёт номер четверти плоскости, 
+// в которой находится эта точка.
 
-Console.Write("Введите цифру дня недели ");
-int num = int.Parse(Console.ReadLine());
-if ((num > 0)&&(num < 8))
-{
-if (num < 6) Console.Write("Рабочий");
-else Console.Write("Выходной");
-}
-else Console.Write("Некоректные данные");
+// Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 2D пространстве.
+
+// A (3,6); B (2,1) -> 5,09
+// A (7,-5); B (1,-1) -> 7,21
+
