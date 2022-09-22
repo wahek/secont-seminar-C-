@@ -49,11 +49,14 @@
 // 782 -> 8
 // 918 -> 1
 
-// Console.Write("Введите число: ");
-// int num = int.Parse(Console.ReadLine());
-// int second = num % 100;
-// Console.Write($"Вторая цифра числа: {second}");
-
+Console.Write("Введите число: ");
+int num = int.Parse(Console.ReadLine());
+if ((num>=100)&&(num<1000)){
+    int lost = num % 100;
+    int second = lost / 10;
+    Console.Write($"Вторая цифра числа: {second}");
+}
+else Console.Write("Число не соответствует указанным требованиям");
 
 
 // Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
